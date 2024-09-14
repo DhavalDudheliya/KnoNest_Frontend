@@ -31,15 +31,13 @@ const SignUpPage = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/auth/login", formData);
+      const response = await axios.post("/auth/register", formData);
 
-      if (response.status === 200 || response.data.success) {
-        // Redirect to home page upon successful login
-        navigate("/home");
+      if (response.status === 201 || response.data.success) {
+        navigate("/login");
       }
     } catch (error) {
-      // Display error if login fails
-      setError("Login failed. Please check your credentials.");
+      setError("Signup failed");
       console.error(error);
     }
   };
@@ -58,11 +56,11 @@ const SignUpPage = () => {
           <form onSubmit={handleSubmit}>
             <div className="grid gap-5">
               <div className="grid gap-2">
-                <Label htmlFor="name">Username</Label>
+                <Label htmlFor="username">Username</Label>
                 <Input
-                  id="name"
-                  type="tel"
-                  placeholder="name"
+                  id="username"
+                  type="text"
+                  placeholder="username"
                   value={formData.username}
                   onChange={handleChange}
                   required
@@ -108,7 +106,7 @@ const SignUpPage = () => {
       </div>
       <div className="hidden bg-muted lg:block shadow-[0_50px_25px_-24px_rgb(0,0,0,0.3)] h-screen">
         <img
-          src="/logo.png"
+          src="/home.png"
           alt="Image"
           className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

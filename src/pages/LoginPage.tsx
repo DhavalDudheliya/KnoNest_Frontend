@@ -96,7 +96,7 @@ const LoginPage = () => {
       </div>
       <div className="hidden bg-muted lg:block shadow-[0_50px_25px_-24px_rgb(0,0,0,0.3)] h-screen">
         <img
-          src="/logo.png"
+          src="/home.png"
           alt="Image"
           className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />
