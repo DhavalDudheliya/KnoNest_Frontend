@@ -5,7 +5,7 @@ import axios from "axios";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import BlogPage from "./pages/BlogPage";
-import AdminPage from "./pages/AdminDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from "./pages/HomePage";
 import Layout from "./Layout";
@@ -23,7 +23,7 @@ function App() {
     <UserProvider>
       <BlogProvider>
         <Routes>
-          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/" element={<Layout />}>
