@@ -23,7 +23,7 @@ function App() {
     <UserProvider>
       <BlogProvider>
         <Routes>
-          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admindashboard" element={<AdminDashboard />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/" element={<Layout />}>
