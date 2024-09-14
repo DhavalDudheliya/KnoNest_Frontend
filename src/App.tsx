@@ -23,16 +23,13 @@ function App() {
     <UserProvider>
       <BlogProvider>
         <Routes>
-          "{/* Public Routes */}
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
-          {/* Layout Routes */}
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="/blog/:id" element={<BlogPage />} />
           </Route>
-          <Route path="/admin" element={<AdminPage />} />
-          {/* Error Pages */}
           <Route path="/404" element={<NotFoundPage />} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
